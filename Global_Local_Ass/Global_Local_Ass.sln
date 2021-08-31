@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31613.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Glob_Loc_Assignment", "..\Glob_Loc_Assignment\Glob_Loc_Assignment.csproj", "{D7660084-DD86-41DC-8BA4-0CD880A0E9C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary_Glob_loc_Assignment", "..\ClassLibrary_Glob_loc_Assignment\ClassLibrary_Glob_loc_Assignment.csproj", "{ED0FE567-C150-4828-B209-52C620FF803F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D7660084-DD86-41DC-8BA4-0CD880A0E9C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7660084-DD86-41DC-8BA4-0CD880A0E9C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7660084-DD86-41DC-8BA4-0CD880A0E9C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7660084-DD86-41DC-8BA4-0CD880A0E9C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED0FE567-C150-4828-B209-52C620FF803F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED0FE567-C150-4828-B209-52C620FF803F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED0FE567-C150-4828-B209-52C620FF803F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED0FE567-C150-4828-B209-52C620FF803F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9FC6C372-67EF-4FEE-85DF-41BA45D9AC1D}
+	EndGlobalSection
+EndGlobal
