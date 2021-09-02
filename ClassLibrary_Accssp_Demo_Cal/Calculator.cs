@@ -4,8 +4,8 @@ namespace ClassLibrary_Accssp_Demo_Cal
 {
     public class Calculator
     {
-        public int a;
-        public int b;
+        public int a=50;
+        public int b=5;//hyachi main method wait
         public int res;
 
         public void UserInput()
