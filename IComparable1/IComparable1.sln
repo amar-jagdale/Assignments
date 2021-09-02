@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericList", "..\GenericLi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericStack", "..\GenericStack\GenericStack.csproj", "{FB64AC6F-7993-40E5-9F98-E29D3AAEB21C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genric_Stack", "..\Genric_Stack\Genric_Stack.csproj", "{5833ECBA-5086-41CB-B20E-156027C856AD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{FB64AC6F-7993-40E5-9F98-E29D3AAEB21C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB64AC6F-7993-40E5-9F98-E29D3AAEB21C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB64AC6F-7993-40E5-9F98-E29D3AAEB21C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5833ECBA-5086-41CB-B20E-156027C856AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5833ECBA-5086-41CB-B20E-156027C856AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5833ECBA-5086-41CB-B20E-156027C856AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5833ECBA-5086-41CB-B20E-156027C856AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
