@@ -18,7 +18,7 @@ namespace Async_Await_Implement
                 for (int i = 0; i <20;  i++)
                 {
                     Console.WriteLine("Method 1");
-                    Task.Delay(200).Wait();
+                    Task.Delay(230).Wait();
                 }
             });
         }
@@ -29,7 +29,7 @@ namespace Async_Await_Implement
             {
                 Console.WriteLine(" Method 2");
                 // Do something
-                Task.Delay(200).Wait();
+                Task.Delay(230).Wait();
             }
         }
     }

@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using Model;
 
-namespace ClassLibrary1
+
+namespace DAL_CRUD
 {
-    public class Class1
+    public class CRUD_Implement
     {
         static string constr = "data source=DESKTOP-TL0FRLL\\SQLEXPRESS;Initial Catalog=Emp;integrated security=True";  //Connection String
         public void DisplayEmployee()
@@ -76,13 +78,83 @@ namespace ClassLibrary1
             return true;
         }
 
-        public void Addemployee()
+        //public void Addemployee()
+        //{
+        //    string eno = string.Empty;
+        //    string ename = string.Empty;
+        //    string sal = string.Empty;
+
+        //    Console.WriteLine("Insert New Employee: ");
+
+        //    Console.WriteLine("Enter the Employee Number: ");
+        //    eno = Console.ReadLine();
+
+        //    Console.WriteLine("Enter the Employee Name: ");
+        //    ename = Console.ReadLine();
+
+        //    Console.WriteLine("Enter the Employee Salary: ");
+        //    sal = Console.ReadLine();
+
+        //    ExecuteCommand(string.Format("Insert into emp(eno,ename,sal)values('{0}','{1}','{2}')", eno, ename, sal));  // Insertion Query
+        //    Console.WriteLine("=============== New Employee Details Inserted Succeffuly into the Emp Database ==============");
+        //}
+
+        public void AddNewEmployee(Employee employee)
+        {
+            ExecuteCommand(string.Format("Insert into emp(eno,ename,sal) values('{0}','{1}','{2}')",employee.eno, employee.ename, employee.sal));
+            
+        }
+
+        //public void EditEmployee()
+        //{
+        //    string eno = string.Empty;
+        //    string ename = string.Empty;
+        //    string sal = string.Empty;
+
+        //    Console.WriteLine("EDIT EXISTING Employee: ");
+
+        //    Console.WriteLine("Enter the Employee Number: ");
+        //    eno = Console.ReadLine();
+
+        //    Console.WriteLine("Enter the Employee Name: ");
+        //    ename = Console.ReadLine();
+
+        //    Console.WriteLine("Enter the Employee Salary: ");
+        //    sal = Console.ReadLine();
+
+        //    ExecuteCommand(string.Format("Update emp set ename='{0}',sal='{1}' where eno='{2}'", ename, sal, eno)); //updating Query
+        //    Console.WriteLine("==================== Employee Details Updated Succeffuly into the Emp Database =====================");
+        //}
+
+        public void EditEmployee(Employee employee)
+        {
+            ExecuteCommand(string.Format("Update emp set ename='{0}',sal='{1}' where eno='{2}'",employee.ename, employee.sal,employee.eno));
+
+        }
+
+        //public void DeleteEmployee()
+        //{
+        //    string eno = string.Empty;
+        //    Console.WriteLine("DELETE EXISTING EMPLOYEE: ");
+
+        //    Console.WriteLine("Enter Employee No:");
+        //    eno = Console.ReadLine();
+
+        //    ExecuteCommand(string.Format("delete from emp where eno='{0}'", eno));
+        //    Console.WriteLine("Employee details delted from the Database !" + Environment.NewLine);
+        //}
+
+        public void DeleteEmployee(Employee employee)
+        {
+            ExecuteCommand(string.Format("Delete from emp where eno='{0}'", employee.eno));
+        }
+        public Employee GetInputFromUser()
         {
             string eno = string.Empty;
             string ename = string.Empty;
             string sal = string.Empty;
 
-            Console.WriteLine("Insert New Employee: ");
+            Console.WriteLine("================== New Employee Details ==============: ");
 
             Console.WriteLine("Enter the Employee Number: ");
             eno = Console.ReadLine();
@@ -93,41 +165,16 @@ namespace ClassLibrary1
             Console.WriteLine("Enter the Employee Salary: ");
             sal = Console.ReadLine();
 
-            ExecuteCommand(string.Format("Insert into emp(eno,ename,sal)values('{0}','{1}','{2}')", eno, ename, sal));  // Insertion Query
-            Console.WriteLine("=============== New Employee Details Inserted Succeffuly into the Emp Database ==============");
+            Employee employee = new Employee()
+            {
+                 eno = eno,
+                 ename = ename,
+                 sal = sal
+             };
+
+            return employee;                
         }
 
-        public void EditEmployee()
-        {
-            string eno = string.Empty;
-            string ename = string.Empty;
-            string sal = string.Empty;
-
-            Console.WriteLine("EDIT EXISTING Employee: ");
-
-            Console.WriteLine("Enter the Employee Number: ");
-            eno = Console.ReadLine();
-
-            Console.WriteLine("Enter the Employee Name: ");
-            ename = Console.ReadLine();
-
-            Console.WriteLine("Enter the Employee Salary: ");
-            sal = Console.ReadLine();
-
-            ExecuteCommand(string.Format("Update emp set ename='{0}',sal='{1}' where eno='{2}'", ename,sal,eno)); //updating Query
-            Console.WriteLine("==================== Employee Details Updated Succeffuly into the Emp Database =====================");
-        }
-
-        public void DeleteEmployee()
-        {
-            string eno = string.Empty;
-            Console.WriteLine("DELETE EXISTING EMPLOYEE: ");
-
-            Console.WriteLine("Enter Employee No:");
-            eno = Console.ReadLine();
-
-            ExecuteCommand(string.Format("delete from emp where eno='{0}'", eno));
-            Console.WriteLine("Employee details delted from the Database !" + Environment.NewLine);
-        }
     }
 }
+
